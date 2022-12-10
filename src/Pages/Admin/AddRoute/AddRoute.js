@@ -17,6 +17,9 @@ const AddRoute = () => {
             route_name
         }).then(response => {
             console.log(response.data);
+            if (response.data === "add success") {
+                alert("add success");
+            }
         }).catch(error => console.log(error))
 
     }
@@ -28,7 +31,7 @@ const AddRoute = () => {
                     <h2 className='text-center'>ADD Route</h2>
                 </div>
                 <div className="container my-5">
-                    <form className="shadow-lg p-3 mb-5 bg-body rounded row g-3" action="" method="post">
+                    <form className="shadow-lg p-3 mb-5 bg-body rounded row g-3">
                         <div className="col-md-7">
                             <label for="validationDefaultEmail" className="route_no">Route No.</label>
                             <div className="input-group">

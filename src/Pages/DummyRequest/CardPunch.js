@@ -8,15 +8,6 @@ const CardPunch = () => {
     const [latitude, setLat] = useState([]);
     const [longitude, setLong] = useState([]);
 
-    // useEffect(() => {
-    //     axios.get("http://127.0.0.1:8000/api/view-bus-api")
-    //         .then(response => {
-    //             console.log(response.data);
-    //             setCardPunches(response.data);
-    //         }).catch(err => {
-    //             console.log(err);
-    //         })
-    // }, []);
     const postData = (e) => {
         e.preventDefault();
         axios.post("http://127.0.0.1:8000/api/card-punch", {
