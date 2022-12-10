@@ -18,6 +18,8 @@ import RouteList from './Pages/BusOwner/RouteList/RouteList';
 import BusList from './Pages/BusOwner/BusList/BusList';
 import AddBus from './Pages/BusOwner/AddBus/AddBus';
 import UpdateBus from './Pages/BusOwner/UpdateBus/UpdateBus';
+import ForgetForm from './Pages/ForgetForm/ForgetForm';
+import RouteOrderDistance from './Pages/RouteOrderDistance/RouteOrderDistance';
 import PassengerList from './Pages/Admin/PassengerList/PassengerList';
 
 function App() {
@@ -46,7 +48,12 @@ function App() {
         <Route exact path='/list-Bus' element={<BusList />} />
         <Route exact path='/add-bus' element={<AddBus />} />
 
-        <Route exact path='/update-bus' element={<UpdateBus />} />
+        <Route exact path='/update-bus/:id' element={<UpdateBus />} />
+
+        <Route exact path='/password/forget' element={<ForgetForm />} />
+        <Route exact path='/route-order' element={<RouteOrderDistance />} />
+
+
         <Route exact path='/passenger-list' element={<PassengerList />} />
 
       </Routes>
